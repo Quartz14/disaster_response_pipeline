@@ -119,8 +119,9 @@ def go():
 
 
 def main():
-    #app.run(host='0.0.0.0', port=3001, debug=True)
-    app.run(host='127.0.0.1', port=5000, debug=True)
+    #Note please check if the port mentioned is available in your system, else please modify as required
+    app.run(host='0.0.0.0', port=3001, debug=True)
+    
 
 
 
