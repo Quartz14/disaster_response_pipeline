@@ -3,7 +3,8 @@
 This project is developed as part of the udacity nanodegree program.
 The task is to build an application that can classify a given disaster message into various categories
 Example: Screenshot of final application
-![prediction page](plots/3.png) 
+
+![prediction page](plots/3.PNG) 
 
 Project summary:
 * Using a dataset of real messages that were sent during disaster events, a machine learning pipeline is developed to categorize these events so that the message can be forwarded to an appropriate disaster relief agency.
@@ -13,10 +14,10 @@ Project summary:
 
 Some of the graphs are: 
 1. 
-![prediction page](plots/1.png) 
+![plot 1](plots/1.PNG) 
 
 2.
-![prediction page](plots/2.png) 
+![plot 2](plots/2.PNG) 
 
 
 Files:
