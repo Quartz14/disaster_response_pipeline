@@ -15,6 +15,12 @@ How to run:
 * web app:
   *python app/run.py
 
+
+
+data/process_data.py: python data/process_data.py 'data/messages.csv' ,'data/categories.csv ' ,'data/disaster_response.db'
+* python data/process_data.py data/messages.csv data/categories.csv data/disaster_response.db
+python models/train_classifier.py data/disaster_response.db models/classifier.pkl
+
 Files:
 
 * ELT Pipeline Preperation notebook - Documents the data preperation process from CSV files, messages and categories
