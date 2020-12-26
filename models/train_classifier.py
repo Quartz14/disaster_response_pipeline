@@ -76,10 +76,11 @@ def load_data(db_path):
 
 def build_model():
     """Builds the model for classification of text
+    Grid search is performed to identify the best model
 
     Returns
     -------
-    cv
+    pipeline_cv
         The model that is built, is returned
     """
 
