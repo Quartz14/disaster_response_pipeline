@@ -15,7 +15,7 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
 import sklearn.metrics as skm
-
+from sklearn.svm import LinearSVC
 from sklearn.pipeline import FeatureUnion
 from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import CountVectorizer
@@ -86,13 +86,14 @@ def build_model():
     pipeline = Pipeline([
         ('vect',CountVectorizer(tokenizer=partial(tokenize))),
         ('tfidf',TfidfTransformer()),
-        ('clf',MultiOutputClassifier(RandomForestClassifier(random_state=42)))
+        ('clf',MultiOutputClassifier(LinearSVC(random_state=42, tol=1e-5)))#RandomForestClassifier(random_state=42)))
     ])
 
     parameters = {
     'vect__ngram_range':((3, 3), (1, 2)),
-    'clf__estimator__n_estimators': [150,200],
-    'clf__estimator__warm_start':[True,False]
+    'clf__estimator__max_iter': [1000,500],
+    'clf__estimator__tol': [1e-03,1e-05]
+
     }
     pipeline_cv = GridSearchCV(pipeline, param_grid=parameters)
     return pipeline_cv
